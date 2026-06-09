@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>SCOPELY Rewards</title>
+
+<link rel="stylesheet"
+href="css/rewards.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+<body>
+
+<header>
+
+<div class="logo">
+🎁 SCOPELY Rewards
+</div>
+
+<nav>
+
+<a href="dashboard.html">
+Dashboard
+</a>
+
+<a href="games.html">
+Games
+</a>
+
+<a href="wallet.html">
+Wallet
+</a>
+
+<a href="tournaments.html">
+Tournaments
+</a>
+
+<a href="rewards.html">
+Rewards
+</a>
+
+</nav>
+
+</header>
+
+<section class="hero">
+
+<h1>Rewards Center</h1>
+
+<p>
+
+Play Games • Earn XP • Level Up • Win Rewards
+
+</p>
+
+</section>
+
+<div class="container">
+
+<!-- DAILY REWARD -->
+
+<div class="reward-card">
+
+<h2>
+
+🎉 Daily Reward
+
+</h2>
+
+<p>
+
+Claim your daily XP bonus.
+
+</p>
+
+<button id="dailyRewardBtn">
+
+Claim Reward
+
+</button>
+
+</div>
+
+<!-- XP -->
+
+<div class="reward-card">
+
+<h2>
+
+⚡ Your XP
+
+</h2>
+
+<p id="xpDisplay">
+
+0 XP
+
+</p>
+
+</div>
+
+<!-- LEVEL -->
+
+<div class="reward-card">
+
+<h2>
+
+🏆 Current Level
+
+</h2>
+
+<p id="levelDisplay">
+
+Level 1
+
+</p>
+
+</div>
+
+<!-- WALLET -->
+
+<div class="reward-card">
+
+<h2>
+
+💰 Reward Wallet
+
+</h2>
+
+<p id="rewardBalance">
+
+$0
+
+</p>
+
+</div>
+
+<!-- REFERRAL -->
+
+<div class="reward-card">
+
+<h2>
+
+👥 Referral Link
+
+</h2>
+
+<input
+type="text"
+id="referralLink"
+readonly>
+
+<!-- <button id="copyReferral"> -->
+
+<!-- Copy Link -->
+
+<!-- </button> -->
+<!--  -->
+</div>
+
+<!-- BADGES -->
+
+<div class="reward-card">
+
+<h2>
+
+🎖 Achievement Badges
+
+</h2>
+
+<div class="badges">
+
+<span>🥉 Beginner</span>
+
+<span>🥈 Pro Gamer</span>
+
+<span>🥇 Champion</span>
+
+<span>💎 Elite</span>
+
+</div>
+
+</div>
+
+<!-- LEVEL REWARDS -->
+
+<div class="reward-card">
+
+<h2>
+
+🎁 Level Rewards
+
+</h2>
+
+<ul>
+
+<li>Level 2 → $20 Reward</li>
+
+<li>Level 3 → $50 Reward</li>
+
+<li>Level 4 → $100 Reward</li>
+
+<li>Level 5 → $250 Reward</li>
+
+</ul>
+
+</div>
+
+<!-- REWARD HISTORY -->
+
+<div class="reward-card">
+
+<h2>
+
+📜 Reward History
+
+</h2>
+
+<div id="rewardHistory">
+
+No rewards claimed yet.
+
+</div>
+
+</div>
+
+</div>
+
+<script type="module"
+src="js/rewards.js"></script>
+
+</body>
+</html>

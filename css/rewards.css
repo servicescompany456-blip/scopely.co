@@ -1,0 +1,87 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:#0d1117;
+color:white;
+}
+
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 40px;
+background:#161b22;
+}
+
+.logo{
+font-size:28px;
+font-weight:bold;
+color:#00d084;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin-left:20px;
+}
+
+.hero{
+text-align:center;
+padding:60px 20px;
+}
+
+.container{
+max-width:1200px;
+margin:auto;
+padding:30px;
+display:grid;
+grid-template-columns:
+repeat(auto-fit,minmax(300px,1fr));
+gap:25px;
+}
+
+.reward-card{
+background:#161b22;
+padding:25px;
+border-radius:15px;
+}
+
+.reward-card h2{
+margin-bottom:15px;
+}
+
+.reward-card button{
+margin-top:15px;
+padding:12px 20px;
+background:#00d084;
+border:none;
+border-radius:10px;
+font-weight:bold;
+cursor:pointer;
+}
+
+.reward-card input{
+width:100%;
+padding:12px;
+border:none;
+border-radius:8px;
+margin-top:10px;
+}
+
+.badges{
+display:flex;
+flex-wrap:wrap;
+gap:10px;
+margin-top:15px;
+}
+
+.badges span{
+background:#222;
+padding:10px;
+border-radius:8px;
+}

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>SCOPELY Withdrawal Manager</title>
+
+<link rel="stylesheet"
+href="css/admin-withdrawals.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- TOPBAR -->
+
+    <div class="topbar">
+
+        <div>
+
+            <h1>
+
+                <i class="fas fa-money-bill-wave"></i>
+
+                Withdrawal Manager
+
+            </h1>
+
+            <p class="subtitle">
+
+                Review and approve withdrawal requests
+
+            </p>
+
+        </div>
+
+        <a
+        href="admin.html"
+        class="back-btn">
+
+            <i class="fas fa-arrow-left"></i>
+
+            Back To Admin
+
+        </a>
+
+    </div>
+
+    <!-- STATS -->
+
+    <div class="stats">
+
+        <div class="card stat-card">
+
+            <i class="fas fa-list"></i>
+
+            <h3>
+                Total Requests
+            </h3>
+
+            <p id="totalRequests">
+                0
+            </p>
+
+        </div>
+
+        <div class="card stat-card">
+
+            <i class="fas fa-clock"></i>
+
+            <h3>
+                Pending
+            </h3>
+
+            <p id="pendingRequests">
+                0
+            </p>
+
+        </div>
+
+        <div class="card stat-card">
+
+            <i class="fas fa-check-circle"></i>
+
+            <h3>
+                Approved
+            </h3>
+
+            <p id="approvedRequests">
+                0
+            </p>
+
+        </div>
+
+        <div class="card stat-card">
+
+            <i class="fas fa-times-circle"></i>
+
+            <h3>
+                Rejected
+            </h3>
+
+            <p id="rejectedRequests">
+                0
+            </p>
+
+        </div>
+
+    </div>
+
+    <!-- FILTERS -->
+
+    <div class="filter-card">
+
+        <h3>
+
+            <i class="fas fa-filter"></i>
+
+            Filter Requests
+
+        </h3>
+
+        <select id="statusFilter">
+
+            <option value="all">
+                All Requests
+            </option>
+
+            <option value="pending">
+                Pending
+            </option>
+
+            <option value="approved">
+                Approved
+            </option>
+
+            <option value="rejected">
+                Rejected
+            </option>
+
+        </select>
+
+    </div>
+
+    <!-- WITHDRAWALS -->
+
+    <div class="withdrawals-wrapper">
+
+        <h2>
+
+            <i class="fas fa-file-invoice-dollar"></i>
+
+            Withdrawal Requests
+
+        </h2>
+
+        <div id="withdrawalsList">
+
+            <div class="loading">
+
+                <i class="fas fa-spinner fa-spin"></i>
+
+                Loading withdrawals...
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script type="module"
+src="js/admin-withdrawals.js"></script>
+
+</body>
+</html>

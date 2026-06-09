@@ -1,0 +1,480 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Segoe UI',sans-serif;
+}
+
+body{
+background:#0d1117;
+color:white;
+min-height:100vh;
+}
+
+/* =========================
+CONTAINER
+========================= */
+
+.container{
+max-width:1400px;
+margin:auto;
+padding:30px;
+}
+
+/* =========================
+TOPBAR
+========================= */
+
+.topbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:30px;
+padding-bottom:15px;
+border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.topbar h1{
+font-size:32px;
+color:#00d084;
+}
+
+.back-btn{
+text-decoration:none;
+color:white;
+background:#161b22;
+padding:12px 20px;
+border-radius:12px;
+transition:.3s;
+}
+
+.back-btn:hover{
+background:#00d084;
+color:black;
+}
+
+/* =========================
+SEARCH
+========================= */
+
+.search-box{
+margin-bottom:35px;
+}
+
+.search-box input{
+width:100%;
+padding:16px;
+border:none;
+outline:none;
+border-radius:14px;
+background:#161b22;
+color:white;
+font-size:16px;
+border:1px solid rgba(255,255,255,.08);
+}
+
+.search-box input:focus{
+border-color:#00d084;
+}
+
+/* =========================
+SECTION TITLE
+========================= */
+
+.section-title{
+margin:35px 0 20px;
+font-size:28px;
+color:#00d084;
+font-weight:700;
+}
+
+/* =========================
+GRID
+========================= */
+
+.games-grid{
+display:grid;
+grid-template-columns:
+repeat(auto-fit,minmax(300px,1fr));
+gap:25px;
+}
+
+/* =========================
+GAME CARD
+========================= */
+
+.game-card{
+background:#161b22;
+padding:25px;
+border-radius:20px;
+position:relative;
+overflow:hidden;
+border:1px solid rgba(255,255,255,.05);
+transition:.4s;
+}
+
+.game-card:hover{
+transform:translateY(-8px);
+box-shadow:
+0 10px 30px rgba(0,208,132,.25);
+border-color:#00d084;
+}
+
+.game-card::before{
+content:"";
+position:absolute;
+top:-50%;
+right:-50%;
+width:200px;
+height:200px;
+background:rgba(0,208,132,.05);
+border-radius:50%;
+}
+
+/* =========================
+BADGE
+========================= */
+
+.badge{
+position:absolute;
+top:15px;
+right:15px;
+background:#00d084;
+color:black;
+padding:6px 12px;
+border-radius:30px;
+font-size:12px;
+font-weight:bold;
+}
+
+/* =========================
+CARD CONTENT
+========================= */
+
+.game-card h3{
+font-size:24px;
+margin-bottom:12px;
+}
+
+.game-card p{
+color:#c9d1d9;
+line-height:1.6;
+margin-bottom:20px;
+}
+
+.prize{
+font-size:20px;
+font-weight:bold;
+color:#ffd700;
+margin-bottom:20px;
+}
+
+/* =========================
+PLAY BUTTON
+========================= */
+
+.play-btn{
+width:100%;
+padding:15px;
+border:none;
+border-radius:12px;
+background:linear-gradient(
+135deg,
+#00d084,
+#00a86b
+);
+color:black;
+font-size:16px;
+font-weight:700;
+cursor:pointer;
+transition:.3s;
+}
+
+.play-btn:hover{
+transform:scale(1.03);
+}
+
+/* =========================
+GAME ICON AREA
+========================= */
+
+.game-card::after{
+content:"🎮";
+position:absolute;
+bottom:15px;
+right:20px;
+font-size:40px;
+opacity:.08;
+}
+
+/* =========================
+SCROLLBAR
+========================= */
+
+::-webkit-scrollbar{
+width:8px;
+}
+
+::-webkit-scrollbar-track{
+background:#161b22;
+}
+
+::-webkit-scrollbar-thumb{
+background:#00d084;
+border-radius:20px;
+}
+
+/* =========================
+MOBILE
+========================= */
+
+@media(max-width:768px){
+
+.container{
+padding:20px;
+}
+
+.topbar{
+flex-direction:column;
+gap:15px;
+align-items:flex-start;
+}
+
+.topbar h1{
+font-size:26px;
+}
+
+.games-grid{
+grid-template-columns:1fr;
+}
+
+.section-title{
+font-size:22px;
+}
+
+}
+
+/* =========================
+HERO BANNER
+========================= */
+
+.hero-banner{
+background:linear-gradient(
+135deg,
+#00d084,
+#00a86b
+);
+border-radius:25px;
+padding:60px 40px;
+margin-bottom:30px;
+color:white;
+}
+
+.hero-content h1{
+font-size:42px;
+margin-bottom:15px;
+}
+
+.hero-content p{
+font-size:18px;
+max-width:600px;
+line-height:1.7;
+margin-bottom:20px;
+}
+
+.hero-btn{
+padding:15px 30px;
+border:none;
+border-radius:12px;
+font-size:18px;
+font-weight:bold;
+cursor:pointer;
+background:white;
+color:#00a86b;
+}
+
+/* =========================
+BALANCE CARD
+========================= */
+
+.wallet-balance-card{
+background:#161b22;
+padding:30px;
+border-radius:20px;
+text-align:center;
+margin-bottom:30px;
+border:1px solid rgba(255,255,255,.08);
+}
+
+.wallet-balance-card h1{
+font-size:50px;
+color:#00d084;
+margin:15px 0;
+}
+
+/* =========================
+DAILY REWARD
+========================= */
+
+.daily-reward{
+background:#161b22;
+padding:25px;
+border-radius:20px;
+margin-bottom:30px;
+text-align:center;
+border:1px solid rgba(255,255,255,.08);
+}
+
+.daily-reward h2{
+color:#ffd700;
+margin-bottom:10px;
+}
+
+.daily-reward button{
+margin-top:15px;
+padding:12px 25px;
+border:none;
+border-radius:10px;
+background:#00d084;
+color:black;
+font-weight:bold;
+cursor:pointer;
+}
+
+/* =========================
+FEATURED GAMES
+========================= */
+
+.featured-games{
+display:grid;
+grid-template-columns:
+repeat(auto-fit,minmax(350px,1fr));
+gap:25px;
+margin-bottom:30px;
+}
+
+.featured-card{
+background:#161b22;
+padding:35px;
+border-radius:20px;
+text-align:center;
+border:1px solid rgba(255,255,255,.08);
+transition:.3s;
+}
+
+.featured-card:hover{
+transform:translateY(-6px);
+}
+
+.featured-card h3{
+font-size:28px;
+margin-bottom:15px;
+}
+
+.featured-card button{
+margin-top:20px;
+padding:12px 25px;
+border:none;
+border-radius:12px;
+background:#00d084;
+color:black;
+font-weight:bold;
+cursor:pointer;
+}
+
+/* =========================
+ENTRY FEE
+========================= */
+
+.entry-fee{
+color:#00d084;
+font-weight:bold;
+margin-bottom:15px;
+font-size:18px;
+}
+
+/* =========================
+LEADERBOARD
+========================= */
+
+#leaderboard{
+display:grid;
+grid-template-columns:
+repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.leader-card{
+background:#161b22;
+padding:20px;
+border-radius:20px;
+text-align:center;
+border:1px solid rgba(255,255,255,.08);
+}
+
+.leader-card span{
+font-size:40px;
+display:block;
+margin-bottom:10px;
+}
+
+.leader-card h3{
+margin-bottom:8px;
+}
+
+/* =========================
+RECENT GAMES
+========================= */
+
+#recentGames{
+display:grid;
+gap:15px;
+}
+
+.recent-card{
+background:#161b22;
+padding:20px;
+border-radius:15px;
+border:1px solid rgba(255,255,255,.08);
+}
+
+.recent-card h4{
+margin-bottom:8px;
+color:#00d084;
+}
+
+/* =========================
+LIVE EFFECT
+========================= */
+
+.game-card:hover .play-btn{
+background:linear-gradient(
+135deg,
+#00ff99,
+#00d084
+);
+}
+
+/* =========================
+MOBILE
+========================= */
+
+@media(max-width:768px){
+
+.hero-content h1{
+font-size:30px;
+}
+
+.hero-content p{
+font-size:15px;
+}
+
+.wallet-balance-card h1{
+font-size:35px;
+}
+
+.featured-games{
+grid-template-columns:1fr;
+}
+
+}

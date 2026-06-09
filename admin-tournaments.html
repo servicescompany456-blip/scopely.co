@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SCOPELY Admin</title>
+
+<link rel="stylesheet" href="css/admin-tournaments.css">
+
+</head>
+<body>
+
+<div class="admin-container">
+
+<h1>Create Tournament</h1>
+
+<form id="tournamentForm">
+
+<input
+type="text"
+id="title"
+placeholder="Tournament Name"
+required>
+
+<input
+type="number"
+id="entryFee"
+placeholder="Entry Fee"
+required>
+
+<input
+type="number"
+id="prizePool"
+placeholder="Prize Pool"
+required>
+
+<input
+type="datetime-local"
+id="startTime"
+required>
+
+<select id="status">
+
+<option value="Waiting">
+Waiting
+</option>
+
+<option value="LIVE">
+LIVE
+</option>
+
+<option value="Finished">
+Finished
+</option>
+
+</select>
+
+<button type="submit">
+Create Tournament
+</button>
+
+</form>
+
+<div id="successMsg"></div>
+
+</div>
+
+<script type="module"
+src="js/admin-tournaments.js"></script>
+
+</body>
+</html>

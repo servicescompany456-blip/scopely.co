@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Xrp*inc Wallet | SCOPELY</title>
+
+<link rel="stylesheet" href="css/wallet.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="wallet-container">
+
+    <!-- TOP BAR -->
+
+    <div class="top-bar">
+
+        <h1>
+            <i class="fas fa-wallet"></i>
+            Xrp*inc Wallet
+        </h1>
+
+        <a href="dashboard.html" class="back-btn">
+
+            <i class="fas fa-arrow-left"></i>
+
+            Dashboard
+
+        </a>
+
+    </div>
+
+    <!-- USER INFO -->
+
+    <div class="wallet-user">
+
+        <h3 id="walletUsername">
+            Loading...
+        </h3>
+
+        <p id="walletEmail">
+            Loading...
+        </p>
+
+    </div>
+
+    <!-- TOTAL BALANCE -->
+
+    <div class="total-balance">
+
+        <h2>Total Balance</h2>
+
+        <h1>
+
+            $
+
+            <span id="totalBalance">
+                0.00
+            </span>
+
+        </h1>
+
+        <p>
+            Available Wallet Balance
+        </p>
+
+    </div>
+
+    <!-- WALLET BALANCES -->
+
+    <div class="crypto-grid">
+
+        <!-- BTC -->
+
+        <div class="crypto-card btc">
+
+            <i class="fab fa-bitcoin"></i>
+
+            <h3>Bitcoin</h3>
+
+        </div>
+
+        <!-- SOL -->
+
+        <div class="crypto-card sol">
+
+            <i class="fas fa-coins"></i>
+
+            <h3>Solana</h3>
+
+        </div>
+
+        <!-- USDT -->
+
+        <div class="crypto-card usdt">
+
+            <i class="fas fa-dollar-sign"></i>
+
+            <h3>USDT</h3>
+
+        </div>
+
+        <!-- PAYPAL -->
+
+        <div class="crypto-card paypal">
+
+            <i class="fab fa-paypal"></i>
+
+            <h3>PayPal</h3>
+
+        </div>
+
+    </div>
+
+    <!-- ACTION BUTTONS -->
+
+    <div class="wallet-actions">
+
+        <a href="deposit.html">
+
+            <button>
+
+                <i class="fas fa-plus-circle"></i>
+
+                Deposit
+
+            </button>
+
+        </a>
+
+        <a href="">
+
+            <button>
+
+                <i class="fas fa-minus-circle"></i>
+
+                Withdraw
+
+            </button>
+
+        </a>
+
+        <a href="#transferSection">
+
+            <button>
+
+                <i class="fas fa-paper-plane"></i>
+
+                Transfer
+
+            </button>
+
+        </a>
+
+        <a href="">
+
+            <button>
+
+                <i class="fab fa-paypal"></i>
+
+                PayPal
+
+            </button>
+
+        </a>
+
+    </div>
+
+    <!-- TRANSFER SECTION -->
+
+    <div
+    class="transfer-section"
+    id="transferSection">
+
+        <h2>
+
+            <i class="fas fa-exchange-alt"></i>
+
+            Transfer Funds
+
+        </h2>
+
+        <p>
+
+            Transfer wallet balance to another SCOPELY player.
+
+        </p>
+
+        <form id="transferForm">
+
+            <input
+            type="email"
+            id="receiverEmail"
+            placeholder="Recipient Email"
+            required>
+
+            <input
+            type="number"
+            id="transferAmount"
+            placeholder="Enter Amount"
+            min="1"
+            required>
+
+            <button type="submit">
+
+                Send Funds
+
+            </button>
+
+        </form>
+
+        <p id="transferMessage"></p>
+
+    </div>
+
+    <!-- PAYMENT METHODS -->
+
+    <div class="market-section">
+
+        <h2>
+
+            <i class="fas fa-chart-line"></i>
+
+            Payment Methods
+
+        </h2>
+
+        <div class="market-grid">
+
+            <div class="market-card btc">
+
+                <h3>Bitcoin (BTC)</h3>
+
+                <p class="price"
+                id="btcPrice">
+
+                    Available
+
+                </p>
+
+                <p class="up">
+
+                    Deposit & Withdraw
+
+                </p>
+
+            </div>
+
+            <div class="market-card sol">
+
+                <h3>Solana (SOL)</h3>
+
+                <p class="price"
+                id="solPrice">
+
+                    Available
+
+                </p>
+
+                <p class="up">
+
+                    Deposit & Withdraw
+
+                </p>
+
+            </div>
+
+            <div class="market-card usdt">
+
+                <h3>USDT</h3>
+
+                <p class="price"
+                id="usdtPrice">
+
+                    Available
+
+                </p>
+
+                <p class="up">
+
+                    Deposit & Withdraw
+
+                </p>
+
+            </div>
+
+            <div class="market-card paypal">
+
+                <h3>PayPal</h3>
+
+                <p class="price">
+
+                    Available
+
+                </p>
+
+                <p class="up">
+
+                    Deposit & Withdraw
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- SECURITY -->
+
+    <div class="wallet-info">
+
+        <h2>
+
+            <i class="fas fa-shield-alt"></i>
+
+            Wallet Security
+
+        </h2>
+
+        <ul>
+
+            <li>
+                Deposits require admin approval.
+            </li>
+
+            <li>
+                Withdrawals are verified manually.
+            </li>
+
+            <li>
+                Never share your password.
+            </li>
+
+            <li>
+                Always verify wallet addresses.
+            </li>
+
+            <li>
+                Report suspicious activity immediately.
+            </li>
+
+        </ul>
+
+    </div>
+
+</div>
+
+<script type="module" src="js/wallet.js"></script>
+
+</body>
+</html>
+

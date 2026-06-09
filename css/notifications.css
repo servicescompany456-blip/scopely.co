@@ -1,0 +1,112 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:#0f172a;
+color:#fff;
+min-height:100vh;
+padding:30px;
+}
+
+.container{
+max-width:1000px;
+margin:auto;
+}
+
+.header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:20px;
+flex-wrap:wrap;
+gap:15px;
+}
+
+.header h1{
+font-size:30px;
+}
+
+.back-btn{
+background:#2563eb;
+color:white;
+text-decoration:none;
+padding:12px 20px;
+border-radius:8px;
+font-weight:bold;
+transition:.3s;
+}
+
+.back-btn:hover{
+background:#1d4ed8;
+}
+
+.info-card{
+background:#1e293b;
+padding:20px;
+border-radius:12px;
+margin-bottom:20px;
+border-left:4px solid #38bdf8;
+}
+
+#notificationList{
+display:flex;
+flex-direction:column;
+gap:15px;
+}
+
+.notification-card{
+background:#1e293b;
+padding:20px;
+border-radius:12px;
+box-shadow:0 4px 10px rgba(0,0,0,.2);
+border-left:4px solid #22c55e;
+}
+
+.notification-card h3{
+margin-bottom:10px;
+color:#38bdf8;
+}
+
+.notification-card p{
+line-height:1.6;
+margin-bottom:10px;
+}
+
+.notification-card small{
+color:#94a3b8;
+}
+
+.loading-card{
+background:#1e293b;
+padding:30px;
+text-align:center;
+border-radius:12px;
+}
+
+.loading-card i{
+font-size:35px;
+margin-bottom:10px;
+color:#38bdf8;
+}
+
+@media(max-width:768px){
+
+.header{
+flex-direction:column;
+align-items:flex-start;
+}
+
+.header h1{
+font-size:24px;
+}
+
+.back-btn{
+width:100%;
+text-align:center;
+}
+
+}

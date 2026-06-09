@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>SCOPELY Notifications</title>
+
+<link rel="stylesheet"
+href="css/notifications.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- HEADER -->
+
+    <div class="header">
+
+        <h1>
+            <i class="fas fa-bell"></i>
+            Notifications
+            <span id="notificationCount">
+                (0)
+            </span>
+        </h1>
+
+        <a href="dashboard.html"
+        class="back-btn">
+
+            <i class="fas fa-arrow-left"></i>
+            Back To Dashboard
+
+        </a>
+
+    </div>
+
+    <!-- INFO CARD -->
+
+    <div class="info-card">
+
+        <p>
+            View all notifications here.
+        </p>
+
+    </div>
+
+    <!-- NOTIFICATION LIST -->
+
+    <div id="notificationList">
+
+        <div class="loading-card">
+
+            <i class="fas fa-spinner fa-spin"></i>
+
+            <p>
+                Loading notifications...
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script type="module"
+src="js/notifications.js"></script>
+
+</body>
+</html>

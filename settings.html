@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SCOPELY Settings</title>
+
+<link rel="stylesheet" href="css/settings.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+<div class="settings-container">
+
+    <div class="topbar">
+
+        <h1>
+            <i class="fas fa-cog"></i>
+            Settings
+        </h1>
+
+        <a href="dashboard.html" class="back-btn">
+            Dashboard
+        </a>
+
+    </div>
+
+    <!-- PROFILE -->
+
+    <div class="card">
+
+        <h2>
+            <i class="fas fa-user"></i>
+            Profile Settings
+        </h2>
+
+        <div class="form-group">
+
+            <label>Username</label>
+
+            <input
+            type="text"
+            id="username">
+
+        </div>
+
+        <div class="form-group">
+
+            <label>Email</label>
+
+            <input
+            type="email"
+            id="email"
+            disabled>
+
+        </div>
+
+        <button id="saveProfile">
+            Save Changes
+        </button>
+
+    </div>
+
+    <!-- SECURITY -->
+
+    <div class="card">
+
+        <h2>
+            <i class="fas fa-lock"></i>
+            Security
+        </h2>
+
+        <div class="form-group">
+
+            <label>New Password</label>
+
+            <input
+            type="password"
+            id="newPassword">
+
+        </div>
+
+        <button id="changePassword">
+            Change Password
+        </button>
+
+    </div>
+
+    <!-- NOTIFICATIONS -->
+
+    <div class="card">
+
+        <h2>
+            <i class="fas fa-bell"></i>
+            Notifications
+        </h2>
+
+        <div class="toggle-row">
+
+            <span>
+                Tournament Updates
+            </span>
+
+            <input
+            type="checkbox"
+            id="notificationToggle">
+
+        </div>
+
+    </div>
+
+    <!-- ACCOUNT INFO -->
+
+    <div class="card">
+
+        <h2>
+            <i class="fas fa-chart-line"></i>
+            Account Statistics
+        </h2>
+
+        <p>
+            Balance:
+            $
+            <span id="balance">
+                0
+            </span>
+        </p>
+
+        <p>
+            XP:
+            <span id="xp">
+                0
+            </span>
+        </p>
+
+        <p>
+            Level:
+            <span id="level">
+                1
+            </span>
+        </p>
+
+    </div>
+
+    <!-- DANGER ZONE -->
+
+    <div class="card danger">
+
+        <h2>
+            <i class="fas fa-trash"></i>
+            Danger Zone
+        </h2>
+
+        <button id="deleteAccount">
+            Delete Account
+        </button>
+
+    </div>
+
+</div>
+
+<script type="module" src="js/settings.js"></script>
+
+</body>
+</html>

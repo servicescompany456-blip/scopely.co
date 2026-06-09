@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SCOPELY Tournament Room</title>
+
+<link rel="stylesheet" href="css/room.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+<body>
+
+<div class="room-container">
+
+    <!-- TOP BAR -->
+
+    <div class="topbar">
+
+        <h1 id="roomTitle">
+            Tournament Room
+        </h1>
+
+        <a href="tournaments.html" class="back-btn">
+            <i class="fas fa-arrow-left"></i>
+            Back
+        </a>
+
+    </div>
+
+    <!-- ROOM GRID -->
+
+    <div class="room-grid">
+
+        <!-- PLAYERS -->
+
+        <div class="room-card">
+
+            <h2>
+                <i class="fas fa-users"></i>
+                Players Joined
+            </h2>
+
+            <div id="playersList">
+
+                Loading players...
+
+            </div>
+
+        </div>
+
+        <!-- MATCH STATUS -->
+
+        <div class="room-card">
+
+            <h2>
+                <i class="fas fa-gamepad"></i>
+                Match Status
+            </h2>
+
+            <p id="matchStatus">
+                Waiting for tournament to start...
+            </p>
+
+        </div>
+
+        <!-- PRIZE POOL -->
+
+        <div class="room-card">
+
+            <h2>
+                <i class="fas fa-trophy"></i>
+                Prize Pool
+            </h2>
+
+            <h1 id="prizePool">
+                $0
+            </h1>
+
+        </div>
+
+    </div>
+
+    <!-- TOURNAMENT STATS -->
+
+<div class="room-card">
+
+    <h2>📊 Tournament Stats</h2>
+
+    <div class="stats-grid">
+
+        <div class="stat-box">
+
+            <h3>Players</h3>
+
+            <p id="playerCount">0</p>
+
+        </div>
+
+        <div class="stat-box">
+
+            <h3>Prize Pool</h3>
+
+            <p id="prizePool">$0</p>
+
+        </div>
+
+        <div class="stat-box">
+
+            <h3>Status</h3>
+
+            <p id="matchStatus">Waiting...</p>
+
+        </div>
+
+        <div class="stat-box">
+
+            <h3>Starts In</h3>
+
+            <p id="countdown">00:00:00</p>
+
+        </div>
+
+    </div>
+
+</div>
+
+    <!-- CHAT SECTION -->
+
+    <div class="room-card chat-section">
+
+        <h2>
+            💬 Tournament Chat
+        </h2>
+
+        <div
+        id="chatMessages"
+        class="chat-box">
+
+        </div>
+
+        <div class="chat-input">
+
+            <input
+            type="text"
+            id="chatInput"
+            placeholder="Type your message...">
+
+            <button
+            id="sendMessage">
+
+                <i class="fas fa-paper-plane"></i>
+                Send
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script type="module" src="js/room.js"></script>
+
+</body>
+</html>

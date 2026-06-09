@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SCOPELY Dashboard</title>
+
+<link rel="stylesheet" href="css/dashboard.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+
+            <span>SCOPELY</span>
+
+            <small>INC LIMITED</small>
+
+        </div>
+
+        <nav>
+
+            <a href="dashboard.html" class="active">
+                <i class="fas fa-house"></i>
+                Dashboard
+            </a>
+
+            <a href="">
+                <i class="fas fa-wallet"></i>
+                Xrp*inc Wallet
+            </a>
+
+            <a href="">
+                <i class="fas fa-gamepad"></i>
+                Games
+            </a>
+
+            <a href="">
+                <i class="fas fa-trophy"></i>
+                Tournaments
+            </a>
+
+            <a href="leaderboard.html">
+                <i class="fas fa-ranking-star"></i>
+                Leaderboard
+            </a>
+
+            <a href="">
+                <i class="fas fa-gift"></i>
+                Rewards
+            </a>
+
+            <a href="friends.html">
+                <i class="fas fa-users"></i>
+                Friends
+            </a>
+
+            <a href="notifications.html">
+
+                <i class="fas fa-bell"></i>
+
+                Notifications
+
+                <span id="notificationBadge">
+                    0
+                </span>
+
+            </a>
+
+            <a href="transactions.html">
+                <i class="fas fa-receipt"></i>
+                Transactions
+            </a>
+
+            <a href="">
+                <i class="fas fa-user"></i>
+                Profile
+            </a>
+
+            <a href="">
+                <i class="fas fa-gear"></i>
+                Settings
+            </a>
+
+            <a
+            id="adminMenu"
+            href="admin.html"
+            style="display:none;">
+
+                <i class="fas fa-user-shield"></i>
+
+                Admin Panel
+
+            </a>
+
+        </nav>
+
+        <button id="logoutBtn">
+
+            <i class="fas fa-sign-out-alt"></i>
+
+            Logout
+
+        </button>
+
+    </aside>
+
+    <!-- MAIN -->
+
+    <main class="main">
+
+        <!-- TOP BAR -->
+
+        <div class="topbar">
+
+            <div>
+
+                <h1>
+
+                    Welcome Back,
+
+                    <span id="username">
+
+                        Player
+
+                    </span>
+
+                </h1>
+
+                <p>
+
+                    SCOPELY Gaming Network
+
+                </p>
+
+            </div>
+
+            <div class="live-status">
+
+                <span></span>
+
+                ENGINE ONLINE
+
+            </div>
+
+        </div>
+
+        <!-- PROFILE CARD -->
+
+        <section class="profile-card">
+
+            <div class="avatar">
+
+                <i class="fas fa-user-circle"></i>
+
+            </div>
+
+            <div>
+
+                <h2 id="profileName">
+
+                    Loading...
+
+                </h2>
+
+                <p id="profileEmail">
+
+                    Loading...
+
+                </p>
+
+                <small>
+
+                    Status:
+                    <span id="userStatus">
+
+                        Active
+
+                    </span>
+
+                </small>
+
+            </div>
+
+        </section>
+
+        <!-- WALLET -->
+
+        <section class="wallet-card">
+
+            <div>
+
+                <small>XRP*INC WALLET</small>
+
+                <h1>
+
+                    $
+
+                    <span id="balance">
+
+                        0.00
+
+                    </span>
+
+                </h1>
+
+            </div>
+
+            <div class="wallet-buttons">
+
+                <a href="">
+
+                    <button>
+
+                        Deposit
+
+                    </button>
+
+                </a>
+
+                <a href="">
+
+                    <button>
+
+                        Continue to Blockchain
+
+                    </button>
+
+                </a>
+
+                <button>
+
+                    Request Manuel Withdrawal
+
+                </button>
+
+            </div>
+
+        </section>
+
+        <!-- XP BAR -->
+
+        <section class="xp-card">
+
+            <div class="xp-header">
+
+                <span>
+
+                    Level
+                    <strong id="level">
+
+                        1
+
+                    </strong>
+
+                </span>
+
+                <span>
+
+                    XP:
+                    <strong id="xp">
+
+                        0
+
+                    </strong>
+
+                </span>
+
+            </div>
+
+            <div class="xp-bar">
+
+                <div id="xpProgress">
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- STATS -->
+
+        <section class="stats-grid">
+
+            <div class="stat-card">
+
+                <h3>
+
+                    Games Played
+
+                </h3>
+
+                <p id="gamesPlayed">
+
+                    0
+
+                </p>
+
+            </div>
+
+            <div class="stat-card">
+
+                <h3>
+
+                    Rewards Earned
+
+                </h3>
+
+                <p>
+
+                    $
+
+                    <span id="rewardsEarned">
+
+                        0
+
+                    </span>
+
+                </p>
+
+            </div>
+
+            <div class="stat-card">
+
+                <h3>
+
+                    Spins Today
+
+                </h3>
+
+                <p id="spinsToday">
+
+                    0/5
+
+                </p>
+
+            </div>
+
+            <div class="stat-card">
+
+                <h3>
+
+                    Ranking
+
+                </h3>
+
+                <p>
+
+                    Premium tier
+
+                </p>
+
+            </div>
+
+        </section>
+
+        <!-- QUICK ACCESS -->
+
+        <section class="quick-access">
+
+            <h2>
+
+                Quick Launch
+
+            </h2>
+
+            <div class="quick-grid">
+
+                <a href="">
+
+                    <i class="fas fa-gamepad"></i>
+
+                    Games
+
+                </a>
+
+                <a href="">
+
+                    <i class="fas fa-coins"></i>
+
+                    Lucky Spin
+
+                </a>
+
+                <a href="">
+
+                    <i class="fas fa-trophy"></i>
+
+                    Tournaments
+
+                </a>
+
+                <a href="">
+
+                    <i class="fas fa-wallet"></i>
+
+                    Wallet
+
+                </a>
+
+            </div>
+
+        </section>
+
+        <!-- ANNOUNCEMENTS -->
+
+        <section class="announcement-card">
+
+            <h2>
+
+                System Broadcast
+
+            </h2>
+
+            <div id="announcementMessage">
+
+                Loading...
+
+            </div>
+
+        </section>
+
+        <!-- RECENT ACTIVITY -->
+
+        <section class="activity-card">
+
+            <h2>
+
+                Recent Activity
+
+            </h2>
+
+            <div id="recentActivity">
+
+                Loading...
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script type="module" src="js/dashboard.js"></script>
+
+</body>
+</html>
+
+

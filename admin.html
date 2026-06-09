@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SCOPELY Admin Panel</title>
+
+<link rel="stylesheet" href="css/admin.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="admin-container">
+
+    
+<!-- TOPBAR -->
+
+<div class="topbar">
+
+    <h1>
+        <i class="fas fa-user-shield"></i>
+        SCOPELY Admin Panel
+    </h1>
+
+    <a href="dashboard.html" class="back-btn">
+        <i class="fas fa-arrow-left"></i>
+        Dashboard
+    </a>
+
+</div>
+
+<!-- STATS -->
+
+<div class="stats-grid">
+
+    <div class="stat-card">
+        <h3>Total Tournaments</h3>
+        <h2 id="totalTournaments">0</h2>
+    </div>
+
+    <div class="stat-card">
+        <h3>Players Joined</h3>
+        <h2 id="totalPlayers">0</h2>
+    </div>
+
+    <div class="stat-card">
+        <h3>Total Prize Pool</h3>
+        <h2 id="totalPrizePool">$0</h2>
+    </div>
+
+</div>
+
+<!-- CREATE TOURNAMENT -->
+
+<div class="card">
+
+    <h2>
+        <i class="fas fa-plus-circle"></i>
+        Create Tournament
+    </h2>
+
+    <input
+    type="text"
+    id="title"
+    placeholder="Tournament Title">
+
+    <input
+    type="number"
+    id="entryFee"
+    placeholder="Entry Fee">
+
+    <input
+    type="number"
+    id="prizePool"
+    placeholder="Prize Pool">
+
+    <input
+    type="number"
+    id="maxPlayers"
+    placeholder="Maximum Players">
+
+    <input
+    type="datetime-local"
+    id="startTime">
+
+    <select id="status">
+
+        <option value="OPEN">
+            OPEN
+        </option>
+
+        <option value="LIVE">
+            LIVE
+        </option>
+
+        <option value="FINISHED">
+            FINISHED
+        </option>
+
+    </select>
+
+    <button id="createTournament">
+        <i class="fas fa-plus"></i>
+        Create Tournament
+    </button>
+
+</div>
+
+<!-- ACTIVE TOURNAMENTS -->
+
+<div class="card">
+
+    <h2>
+        <i class="fas fa-trophy"></i>
+        Active Tournaments
+    </h2>
+
+    <div id="tournamentList">
+        Loading tournaments...
+    </div>
+
+</div>
+
+<!-- PENDING DEPOSITS -->
+
+<div class="card">
+
+    <h2>
+        <i class="fas fa-wallet"></i>
+        Pending Deposits
+    </h2>
+
+    <div id="depositList">
+        Loading deposits...
+    </div>
+
+</div>
+
+<!-- ADMIN ACTIONS -->
+
+<div class="card">
+
+    <h2>
+        <i class="fas fa-tools"></i>
+        Admin Actions
+    </h2>
+
+    <div class="admin-links">
+
+        <a
+        href="admin-withdrawals.html"
+        class="admin-btn">
+
+            <i class="fas fa-money-bill-wave"></i>
+            Manage Withdrawals
+
+        </a>
+
+        <a
+        href="admin-deposits.html"
+        class="admin-btn">
+
+            <i class="fas fa-wallet"></i>
+            Manage Deposits
+
+        </a>
+
+        <a
+        href="transactions.html"
+        class="admin-btn">
+
+            <i class="fas fa-receipt"></i>
+            View Transactions
+
+        </a>
+
+        <a
+        href="wallet.html"
+        class="admin-btn">
+
+            <i class="fas fa-coins"></i>
+            Wallet Manager
+
+        </a>
+
+    </div>
+
+</div>
+
+<!-- WINNERS -->
+
+<div class="card">
+
+    <h2>
+        <i class="fas fa-crown"></i>
+        Tournament Winners
+    </h2>
+
+    <div id="winnerList">
+        No winners selected.
+    </div>
+
+</div>
+
+
+</div>
+
+<script type="module" src="js/admin.js"></script>
+
+</body>
+</html>
